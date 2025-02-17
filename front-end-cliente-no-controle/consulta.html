@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css/patriminio.css">
+    <script src="../scripts.js/consulta.js" defer></script>
+    <title>Consulta de Patrimônio</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">MeuLogo</div>
+        <nav class="menu" id="menu">
+            <a href="index.html">Patrimonio</a>
+            <a href="consulta.html">Consulta Patrimonio</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <h1 class="titulo">Consulta de Patrimônio</h1>
+
+    <!-- Formulário de consulta por ID -->
+    <div class="consulta-container">
+        <form id="formConsulta">
+            <label for="idConsulta">Digite o ID do Patrimônio:</label>
+            <input type="text" id="idConsulta" placeholder="Ex: 123" required>
+            <button type="submit">Consultar</button>
+        </form>
+
+        <!-- Área de exibição dos resultados -->
+        <div class="resultado-consulta" id="resultadoConsulta">
+            <p>Resultados serão exibidos aqui.</p>
+        </div>
+    </div>
+
+    <!-- Script para o menu hamburger -->
+    <script>
+        // Adiciona evento de clique ao ícone do hamburger
+        document.getElementById('hamburger').addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active'); // Alterna a classe 'active' no menu
+        });
+    </script>
+</body>
+
+</html>
