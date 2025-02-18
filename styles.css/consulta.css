@@ -47,6 +47,23 @@ body {
     background-color: white;
 }
 
+/* Estilos para o botão Limpar Consulta */
+#limparConsulta {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#limparConsulta:hover {
+    background-color: #c82333; /* Vermelho mais escuro */
+}
+
 /* Estilos para telas menores (mobile) */
 @media (max-width: 768px) {
     .hamburger {

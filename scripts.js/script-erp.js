@@ -14,10 +14,6 @@ const IcentroCusto = document.querySelector(".centroCusto");
 const IcontaContabil = document.querySelector(".contaContabil");
 const ItipoPatrimonio = document.querySelector(".tipoPatrimonio");
 
-if (!formulario || !IcidadeMatriz || !IbairroFilial || !InumeroInventario || !IplacaPatrimonio || !IcentroCusto || !IcontaContabil || !ItipoPatrimonio) {
-    console.error("Um ou mais elementos não foram encontrados no DOM.");
-    return;
-}
 
 // Função para cadastrar
 function cadastrar() {

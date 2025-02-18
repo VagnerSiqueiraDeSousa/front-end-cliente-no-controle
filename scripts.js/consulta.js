@@ -46,3 +46,12 @@ document.getElementById('formConsulta').addEventListener('submit', async functio
         resultadoDiv.innerHTML = `<p class="erro">Patrimônio com ID ${idConsulta} não encontrado.</p>`;
     }
 });
+
+// Evento para o botão "Limpar Consulta"
+document.getElementById('limparConsulta').addEventListener('click', function () {
+    // Limpa o campo de entrada
+    document.getElementById('idConsulta').value = '';
+
+    // Limpa a área de resultados
+    document.getElementById('resultadoConsulta').innerHTML = `<p>Resultados serão exibidos aqui.</p>`;
+});
