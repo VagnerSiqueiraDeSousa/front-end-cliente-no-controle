@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,42 @@
     <script src="../scripts.js/script-erp.js" defer></script>
     <title>Patrimonio</title>
 </head>
-<body>
-        <div class="box_patrominio">
-            <h1 class="titulo">Cliente no Controle</h1>
-            <div class="box_imagem">
-                <img src="/imagens/ilustracao-do-conceito-abstrato-do-controle-de-qualidade-do-produto-padrao-de-seguranca-do-produto-feedback-do-cliente-certificado-de-garantia-linha-de-producao-sucesso-comercial-inspecao_335657-33.avif" alt="">
-            </div>
-            <form>
-                <input class="cidadeMatriz" type="text" class="cidadeMatriz" placeholder="Cidade Matriz">
-                <input class="bairroFilial" type="text" class="bairroFilial" placeholder="Bairro Filial">
-                <input class="numeroInventario" type="text" class="numeroInventario" placeholder="Numero Inventario">
-                <input class="placaPatrimonio" type="text" class="placaParimonio" placeholder="Placa Patrimônio">
-                <input class="centroCusto" type="text" class="centroCusto"  placeholder="Centro Custo">
-                <input class="contaContabil" type="text" class="contaContabil" placeholder="Conta Contabil">
-                <input class="tipoPatrimonio" type="text" class="tipoPatrimonio" placeholder="Tipo Patrimonio">
-                <button type="submit">Cadastrar</button>
-            </form>
-            
-        </div> 
 
+<body>
+    <header class="header">
+        <div class="logo">MeuLogo</div>
+        <nav class="menu">
+            <a href="index.html">Patrimonio</a>
+            <a href="consulta.html">Consulta Patrimonio</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <h1 class="titulo">Cliente no Controle</h1>
+    <div class="box_imagem">
+        <img src="/imagens/ilustracao-do-conceito-abstrato-do-controle-de-qualidade-do-produto-padrao-de-seguranca-do-produto-feedback-do-cliente-certificado-de-garantia-linha-de-producao-sucesso-comercial-inspecao_335657-33.avif"
+            alt="">
+    </div>
+    <form>
+        <input class="cidadeMatriz" type="text" placeholder="Cidade Matriz">
+        <input class="bairroFilial" type="text" placeholder="Bairro Filial">
+        <input class="numeroInventario" type="text" placeholder="Numero Inventario">
+        <input class="placaPatrimonio" type="text" placeholder="Placa Patrimônio">
+        <input class="centroCusto" type="text" placeholder="Centro Custo">
+        <input class="contaContabil" type="text" placeholder="Conta Contabil">
+        <input class="tipoPatrimonio" type="text" placeholder="Tipo Patrimonio">
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
