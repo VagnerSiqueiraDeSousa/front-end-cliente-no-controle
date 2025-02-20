@@ -7,6 +7,9 @@
 
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da tela */
 }
 
 .header {
@@ -47,21 +50,100 @@ body {
     background-color: white;
 }
 
-/* Estilos para o botão Limpar Consulta */
-#limparConsulta {
+/* Container principal */
+.container-consulta {
+    flex: 1; /* Faz o container crescer para ocupar o espaço disponível */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; /* Garante que o container ocupe toda a largura */
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Estilos para o formulário */
+#formConsulta {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formConsulta label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#formConsulta input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#formConsulta input[type="text"]:focus {
+    border-color: #007bff; /* Azul quando o input está em foco */
+}
+
+/* Estilos para os botões */
+#formConsulta button {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #dc3545; /* Vermelho */
+    background-color: #000000; /* Azul */
     color: white;
     border: none;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#formConsulta button:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+}
+
+#limparConsulta {
+    background-color: #dc3545; /* Vermelho */
 }
 
 #limparConsulta:hover {
     background-color: #c82333; /* Vermelho mais escuro */
+}
+
+/* Área de exibição dos resultados */
+.resultado-consulta {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333; /* Cor de fundo escura */
+    color: #fff; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 15px 0; /* Espaçamento interno */
+    font-size: 14px; /* Tamanho da fonte */
+    width: 100%; /* Largura total */
+    margin-top: auto; /* Cola o rodapé no final */
+}
+
+.footer p {
+    margin: 0; /* Remove margens padrão do parágrafo */
 }
 
 /* Estilos para telas menores (mobile) */

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css/patriminio.css">
-    <script src="../scripts.js/consulta.js" defer></script>
+    <link rel="stylesheet" href="/styles.css/consulta.css">
+    <script src="/scripts.js/consulta.js" defer></script>
     <title>Consulta de Patrimônio</title>
 </head>
 
@@ -15,6 +15,7 @@
         <nav class="menu" id="menu">
             <a href="index.html">Patrimonio</a>
             <a href="consulta.html">Consulta Patrimonio</a>
+            <a href="export.html">exportar arquivo</a>
         </nav>
         <div class="hamburger" id="hamburger">
             <span></span>
@@ -26,12 +27,12 @@
     <h1 class="titulo">Consulta de Patrimônio</h1>
 
     <!-- Formulário de consulta por ID -->
-    <div class="consulta-container">
+    <div class="container-consulta">
         <form id="formConsulta">
             <label for="idConsulta">Digite o ID do Patrimônio:</label>
             <input type="text" id="idConsulta" placeholder="Ex: 123" required>
             <button type="submit">Consultar</button>
-            <button type="button" id="limparConsulta">Limpar Consulta</button> <!-- Botão Limpar -->
+            <button type="button" id="limparConsulta">Limpar Consulta</button>
         </form>
     
         <!-- Área de exibição dos resultados -->
@@ -39,6 +40,10 @@
             <p>Resultados serão exibidos aqui.</p>
         </div>
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2025. Todos os direitos reservados.</p>
+    </footer>
 
     <!-- Script para o menu hamburger -->
     <script>
