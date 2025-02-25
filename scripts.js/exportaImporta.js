@@ -1,16 +1,14 @@
-document.getElementById('exportCSV').addEventListener('click', () => {
-    fetch('/export-csv', { method: 'POST' })
-        .then(response => response.blob())
-        .then(blob => {
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'users.csv';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        });
-});
+fetch('/patrimonio/export', { method: 'GET' }) // Alterado para GET
+    .then(response => response.blob())
+    .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'patrimonios.csv'; // Nome do arquivo
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
 
 document.getElementById('exportJSON').addEventListener('click', () => {
     fetch('/export-json', { method: 'POST' })
