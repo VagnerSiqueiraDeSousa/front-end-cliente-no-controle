@@ -13,7 +13,7 @@
     <header class="header">
         <div class="logo">MeuLogo</div>
         <nav class="menu">
-            <a href="index.html">Patrimonio</a>
+            <a href="index.html">Cadastrar</a>
             <a href="consulta.html">Consulta Patrimonio</a>
             <a href="export.html">Exportar Arquivo</a>
         </nav>
@@ -30,13 +30,27 @@
             alt="">
     </div>
     <form>
-        <input class="cidadeMatriz" type="text" placeholder="Cidade Matriz">
-        <input class="bairroFilial" type="text" placeholder="Bairro Filial">
-        <input class="numeroInventario" type="text" placeholder="Numero Inventario">
-        <input class="placaPatrimonio" type="text" placeholder="Placa Patrimônio">
-        <input class="centroCusto" type="text" placeholder="Centro Custo">
-        <input class="contaContabil" type="text" placeholder="Conta Contabil">
-        <input class="tipoPatrimonio" type="text" placeholder="Tipo Patrimonio">
+        <label for="cidadeMatriz">Cidade Matriz</label>
+        <input id="cidadeMatriz" class="cidadeMatriz" type="text">
+    
+        <label for="bairroFilial">Bairro Filial</label>
+        <input id="bairroFilial" class="bairroFilial" type="text">
+    
+        <label for="numeroInventario">Número Inventário</label>
+        <input id="numeroInventario" class="numeroInventario" type="text">
+    
+        <label for="placaPatrimonio">Placa Patrimônio</label>
+        <input id="placaPatrimonio" class="placaPatrimonio" type="text">
+    
+        <label for="centroCusto">Centro Custo</label>
+        <input id="centroCusto" class="centroCusto" type="text">
+    
+        <label for="contaContabil">Conta Contábil</label>
+        <input id="contaContabil" class="contaContabil" type="text">
+    
+        <label for="tipoPatrimonio">Tipo Patrimônio</label>
+        <input id="tipoPatrimonio" class="tipoPatrimonio" type="text">
+    
         <button type="submit">Cadastrar</button>
     </form>
 
