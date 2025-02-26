@@ -8,7 +8,22 @@ async function buscarPatrimonioPorId(id) {
         const patrimonio = await response.json();
         return patrimonio;
     } catch (error) {
-        console.error("Erro ao buscar patrimônio:", error);
+        console.error("Erro ao buscar patrimônio por ID:", error);
+        return null;
+    }
+}
+
+// Função para buscar patrimônio por item no back-end
+async function buscarPatrimonioPorItem(item) {
+    try {
+        const response = await fetch(`http://localhost:8080/patrimonio/item/${item}`); // Substitua pela URL do seu back-end
+        if (!response.ok) {
+            throw new Error(`Erro na requisição: ${response.statusText}`);
+        }
+        const patrimonio = await response.json();
+        return patrimonio;
+    } catch (error) {
+        console.error("Erro ao buscar patrimônio por item:", error);
         return null;
     }
 }
@@ -17,17 +32,26 @@ async function buscarPatrimonioPorId(id) {
 document.getElementById('formConsulta').addEventListener('submit', async function (event) {
     event.preventDefault(); // Evita o recarregamento da página
 
-    const idConsulta = document.getElementById('idConsulta').value;
+    const campoConsulta = document.getElementById('campoConsulta').value;
     const resultadoDiv = document.getElementById('resultadoConsulta');
 
-    // Validação do ID
-    if (!idConsulta || isNaN(idConsulta)) {
-        resultadoDiv.innerHTML = `<p class="erro">Por favor, insira um ID válido.</p>`;
+    // Validação do campo de consulta
+    if (!campoConsulta) {
+        resultadoDiv.innerHTML = `<p class="erro">Por favor, insira um ID ou item válido.</p>`;
         return;
     }
 
-    // Busca o patrimônio pelo ID no back-end
-    const patrimonio = await buscarPatrimonioPorId(idConsulta);
+    // Verifica se o valor é um número (ID) ou uma string (item)
+    const isId = !isNaN(campoConsulta); // Verifica se é um número
+
+    let patrimonio;
+    if (isId) {
+        // Busca por ID
+        patrimonio = await buscarPatrimonioPorId(campoConsulta);
+    } else {
+        // Busca por item
+        patrimonio = await buscarPatrimonioPorItem(campoConsulta);
+    }
 
     if (patrimonio) {
         // Exibe os dados do patrimônio
@@ -44,15 +68,15 @@ document.getElementById('formConsulta').addEventListener('submit', async functio
             <p><strong>Descricao do item: </strong>${patrimonio.descricao_do_item}</P>
         `;
     } else {
-        // Exibe mensagem de erro se o ID não for encontrado
-        resultadoDiv.innerHTML = `<p class="erro">Patrimônio com ID ${idConsulta} não encontrado.</p>`;
+        // Exibe mensagem de erro se o patrimônio não for encontrado
+        resultadoDiv.innerHTML = `<p class="erro">Patrimônio com ${isId ? 'ID' : 'item'} "${campoConsulta}" não encontrado.</p>`;
     }
 });
 
 // Evento para o botão "Limpar Consulta"
 document.getElementById('limparConsulta').addEventListener('click', function () {
     // Limpa o campo de entrada
-    document.getElementById('idConsulta').value = '';
+    document.getElementById('campoConsulta').value = '';
 
     // Limpa a área de resultados
     document.getElementById('resultadoConsulta').innerHTML = `<p>Resultados serão exibidos aqui.</p>`;
