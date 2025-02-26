@@ -13,6 +13,8 @@ const IplacaPatrimonio = document.querySelector(".placaPatrimonio");
 const IcentroCusto = document.querySelector(".centroCusto");
 const IcontaContabil = document.querySelector(".contaContabil");
 const ItipoPatrimonio = document.querySelector(".tipoPatrimonio");
+const Iitem = document.querySelector(".item");
+const Idescricao_do_item = document.querySelector(".descricao_do_item");
 
 
 // Função para cadastrar
@@ -30,7 +32,9 @@ function cadastrar() {
             placaPatrimonio: IplacaPatrimonio.value,
             centroCusto: IcentroCusto.value,
             contaContabil: IcontaContabil.value,
-            tipoPatrimonio: ItipoPatrimonio.value
+            tipoPatrimonio: ItipoPatrimonio.value,
+            item: Iitem.value,
+            descricao_do_item: Idescricao_do_item.value
         })
     })
     .then(function (res) { console.log(res); })
@@ -46,6 +50,8 @@ function limpar() {
     IcentroCusto.value = "";
     IcontaContabil.value = "";
     ItipoPatrimonio.value = "";
+    Iitem.value ="";
+    Idescricao_do_item.value = "";
 }
 
 // Evento de submit do formulário

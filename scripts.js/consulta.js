@@ -40,6 +40,8 @@ document.getElementById('formConsulta').addEventListener('submit', async functio
             <p><strong>Centro de Custo:</strong> ${patrimonio.centroCusto}</p>
             <p><strong>Conta Contábil:</strong> ${patrimonio.contaContabil}</p>
             <p><strong>Tipo de Patrimônio:</strong> ${patrimonio.tipoPatrimonio}</p>
+            <p><strong>Item: </strong>${patrimonio.item}</p>
+            <p><strong>Descricao do item: </strong>${patrimonio.descricao_do_item}</P>
         `;
     } else {
         // Exibe mensagem de erro se o ID não for encontrado
