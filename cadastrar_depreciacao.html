@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Depreciação</title>
+    <link rel="stylesheet" href="styles.css/cadastrarDepreciacao.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">MeuLogo</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu" id="menu">
+            <a href="cadastrar.html">Cadastrar</a>
+            <a href="cadastrar_depreciacao.html">Cadastrar Depreciação</a>
+            <a href="consulta.html">Consulta Patrimonio</a>
+            <a href="export.html">Exportar Arquivo</a>
+        </nav>
+    </header>
+
+    <h1>Cadastrar Depreciação</h1>
+
+    <div class="box_imagem">
+        <img src="/imagens/ilustracao-do-conceito-abstrato-do-controle-de-qualidade-do-produto-padrao-de-seguranca-do-produto-feedback-do-cliente-certificado-de-garantia-linha-de-producao-sucesso-comercial-inspecao_335657-33.avif"
+            alt="">
+    </div>
+
+    <form>
+        <label for="data_depreciacao">Data Depreciação</label>
+        <input id="data_depreciacao" class="data_depreciacao" type="text">
+
+        <label for="valor_entrada">Valor Entrada</label>
+        <input id="valor_entrada" class="valor_entrada" type="text">
+
+        <label for="valor_real">Valor Real</label>
+        <input id="valor_real" class="valor_real" type="text">
+
+        <label for="valor_venda">Valor de Venda</label>
+        <input id="valor_venda" class="valor_venda" type="text">
+
+        <button class="submit">Cadastrar</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2025. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
