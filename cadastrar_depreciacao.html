@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Depreciação</title>
-    <link rel="stylesheet" href="styles.css/cadastrarDepreciacao.css">
+    <link rel="stylesheet" href="styles.css/cadastrar.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         </nav>
     </header>
 
-    <h1>Cadastrar Depreciação</h1>
+    <h1 class="titulo">Cadastrar Depreciação</h1>
 
     <div class="box_imagem">
         <img src="/imagens/ilustracao-do-conceito-abstrato-do-controle-de-qualidade-do-produto-padrao-de-seguranca-do-produto-feedback-do-cliente-certificado-de-garantia-linha-de-producao-sucesso-comercial-inspecao_335657-33.avif"
@@ -32,8 +32,15 @@
     </div>
 
     <form>
+
+        <label for="id">ID patrimonio</label>
+        <input id="id" class="id" type="text">
+
         <label for="data_depreciacao">Data Depreciação</label>
         <input id="data_depreciacao" class="data_depreciacao" type="text">
+
+        <label for="Depreciacao">Depreciação patrimonio</label>
+        <input class="depriciacao" class="depreciacao" type="text" name="" id="">
 
         <label for="valor_entrada">Valor Entrada</label>
         <input id="valor_entrada" class="valor_entrada" type="text">
@@ -47,7 +54,7 @@
         <button class="submit">Cadastrar</button>
     </form>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2025. Todos os direitos reservados.</p>
     </footer>
 

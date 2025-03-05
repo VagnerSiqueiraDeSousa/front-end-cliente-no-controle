@@ -37,6 +37,10 @@ body {
     font-size: 18px;
 }
 
+.menu a:hover{
+    background-color: #575757;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
