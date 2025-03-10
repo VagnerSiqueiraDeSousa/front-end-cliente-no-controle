@@ -11,17 +11,17 @@
 <body>
     <header class="header">
         <div class="logo">MeuLogo</div>
+        <nav class="menu">
+            <a href="cadastrar.html">Cadastrar</a>
+            <a href="cadastrar_depreciacao.html">Cadastrar_Depreciação</a>
+            <a href="consulta.html">Consulta Patrimonio</a>
+            <a href="export.html">Exportar Arquivo</a>
+        </nav>
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <nav class="menu" id="menu">
-            <a href="cadastrar.html">Cadastrar</a>
-            <a href="cadastrar_depreciacao.html">Cadastrar Depreciação</a>
-            <a href="consulta.html">Consulta Patrimonio</a>
-            <a href="export.html">Exportar Arquivo</a>
-        </nav>
     </header>
 
     <h1 class="titulo">Cadastrar Depreciação</h1>
@@ -32,37 +32,35 @@
     </div>
 
     <form>
-
-        <label for="id">ID patrimonio</label>
-        <input id="id" class="id" type="text">
-
-        <label for="data_depreciacao">Data Depreciação</label>
-        <input id="data_depreciacao" class="data_depreciacao" type="text">
-
-        <label for="Depreciacao">Depreciação patrimonio</label>
-        <input class="depriciacao" class="depreciacao" type="text" name="" id="">
-
-        <label for="valor_entrada">Valor Entrada</label>
-        <input id="valor_entrada" class="valor_entrada" type="text">
-
-        <label for="valor_real">Valor Real</label>
-        <input id="valor_real" class="valor_real" type="text">
-
-        <label for="valor_venda">Valor de Venda</label>
-        <input id="valor_venda" class="valor_venda" type="text">
-
-        <button class="submit">Cadastrar</button>
+        <label htmlFor="id_patrimonio">ID Patrimônio</label>
+        <input id="id_patrimonio" className="id_patrimonio" type="text" required />
+    
+        <label htmlFor="data_depreciacao">Data Depreciação</label>
+        <input id="data_depreciacao" className="data_depreciacao" type="date" required />
+    
+        <label htmlFor="depreciacao">Depreciação Patrimônio</label>
+        <input id="depreciacao" className="depreciacao" type="number" step="0.01" required />
+    
+        <label htmlFor="valor_entrada">Valor Entrada</label>
+        <input id="valor_entrada" className="valor_entrada" type="number" step="0.01" required />
+    
+        <label htmlFor="valor_real">Valor Real</label>
+        <input id="valor_real" className="valor_real" type="number" step="0.01" required />
+    
+        <label htmlFor="valor_venda">Valor de Venda</label>
+        <input id="valor_venda" className="valor_venda" type="number" step="0.01" required />
+    
+        <button type="submit" className="submit">Cadastrar</button>
     </form>
 
     <footer class="footer">
         <p>&copy; 2025. Todos os direitos reservados.</p>
     </footer>
 
+    
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
-        hamburger.addEventListener('click', () => {
-            menu.classList.toggle('show');
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
         });
     </script>
 </body>
